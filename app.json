@@ -1,5 +1,6 @@
 {
   "expo": {
+    "sdkVersion": "38.0.0",
     "name": "Go Commerce",
     "slug": "go-commerce",
     "version": "1.0.0",
@@ -8,20 +9,19 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#ffffff"    
+    },
+    "android": {
+      "package": "com.yourcompany.yourappname",
+      "versionCode": 1
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
     "ios": {
       "supportsTablet": true
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
+    
     "description": ""
   }
 }
