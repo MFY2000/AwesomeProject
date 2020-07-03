@@ -15,6 +15,9 @@ class Register extends Component {
   onPressCompleteRegister = () => {
     this.props.navigation.navigate("Home");
   };
+  onPressLogin = () => {
+    this.props.navigation.navigate("Login");
+  };
 
   componentWillMount() {
     this.formPosition = new Animated.Value(0);
@@ -96,7 +99,7 @@ class Register extends Component {
       <View
         style={{
           flex: 1,
-          backgroundColor: "#F6F6F6"
+          backgroundColor: "Wh"
         }}
       >
         <Animated.View
@@ -104,7 +107,9 @@ class Register extends Component {
             height: hp("18%"),
             justifyContent: "center",
             paddingHorizontal: hp("2.5%"),
-            marginTop: this.animatedTitleTopMargin
+            marginTop: this.animatedTitleTopMargin,
+            alignItems: "center",
+            justifyContent: "center"
             // marginTop: Platform.OS == "android" ? hp("3.75%") : null
           }}
         >
@@ -113,7 +118,9 @@ class Register extends Component {
               fontSize: this.animatedTitleSize,
               fontWeight: "400",
               // opacity: this.animatedTitleOpacity
-              opacity: 1
+              opacity: 1,
+              // backgroundColor: "white",
+            
             }}
           >
             Signup.
@@ -168,13 +175,25 @@ class Register extends Component {
                 justifyContent: "flex-end",
                 paddingBottom: hp("5%")
               }}
-            >
+            ><View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              paddingBottom: hp("5%"),
+              paddingHorizontal: hp("2.5%")
+            }}
+          >
               <Button
-                fullWidth
                 onPress={this.onPressCompleteRegister}
                 backgroundColor="#F08C4F"
-                text="Complete registration"
+                text="Submit"
               />
+              <Button
+              onPress={this.onPressLogin}
+              backgroundColor="#5BBC9D"
+              text="Login"
+            />
+            </View>
             </View>
           </ImageBackground>
         </View>

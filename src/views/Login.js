@@ -5,7 +5,13 @@ import Button from "../components/Button";
 
 class Login extends Component {
   onPressRegister = () => {
-    this.props.navigation.navigate("Register");
+    if(true){
+      this.props.navigation.navigate("Register");
+    }
+  };  
+
+  onPressLogin = () => {
+    this.props.navigation.navigate("Home");
   };
 
   render() {
@@ -18,7 +24,7 @@ class Login extends Component {
         <View
           style={{
             flex: 1,
-            backgroundColor: "#F6F6F6",
+            backgroundColor: "white",
             alignItems: "center",
             justifyContent: "center"
           }}
@@ -26,12 +32,14 @@ class Login extends Component {
           {/* brandName part */}
           <Text
             style={{
-              // fontSize: hp("11.25%"),
-              fontSize: 90,
-              fontWeight: "bold"
+              fontSize: hp("15.25%"),
+              // color:"red",
+              fontSize: 70,
+              fontWeight: "bold",
+
             }}
           >
-            fash.
+            MFY
           </Text>
           <Text
             style={{
@@ -39,7 +47,7 @@ class Login extends Component {
               fontWeight: "400"
             }}
           >
-            your 24h fash.store
+            
           </Text>
         </View>
         <View
@@ -49,7 +57,7 @@ class Login extends Component {
         >
           {/* Image part */}
           <ImageBackground
-            source={require("../../assets/login_bg_1.jpg")}
+            source={require("../../assets/men_fashion.jpeg")}
             style={{
               flex: 1,
               width: null,
@@ -76,7 +84,7 @@ class Login extends Component {
                   backgroundColor="#F08C4F"
                   text="Register"
                 />
-                <Button backgroundColor="#5BBC9D" text="Login" />
+                <Button backgroundColor="#5BBC9D" text="Login" onPress={this.onPressLogin}/>
               </View>
             </View>
           </ImageBackground>
